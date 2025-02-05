@@ -1,0 +1,398 @@
+/* General Styles */
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app-container {
+  max-width: 2000px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Header Section */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fc981e; /* Set header background to orange */
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.logo-container {
+  background-color: #fff; /* Keep logo background white */
+  padding: 5px; /* Adjust padding around the logo */
+  border-radius: 8px;
+  margin-left: 290px; /* Shift logo to the right */
+}
+
+.sakar-logo {
+  height: 100px; /* Adjust the logo size */
+  display: block;
+  margin-left: 20px;
+  width: 500px;
+}
+
+.cvvrs-text {
+  font-size: 2.6em;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 240px;
+}
+
+/* Layout */
+.dashboard-layout {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"], input[type="file"], textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+button {
+  margin-top: 10px;
+  padding: 20px 20px;
+  background-color: #fc981e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color: #e68919;
+}
+
+/* Layout Adjustment for Parallel Form Fields */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+/* Styling for the SPM Type dropdown */
+.form-group select {
+  font-size: 16px; /* Adjust font size */
+  font-family: Arial, sans-serif; /* Change font family */
+  padding: 8px; /* Add padding for better appearance */
+  border-radius: 4px; /* Round the corners */
+  border: 1px solid #ccc; /* Border color */
+  width: 463px; /* Ensure it takes full width */
+}
+
+.form-group select option {
+  font-size: 16px; /* Option font size */
+  font-family: Arial, sans-serif; /* Option font family */
+}
+
+/* Crew Details Section */
+.crew-details {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.crew-details h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+/* Button and Radio Buttons Row */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* Adds spacing between items */
+  margin-bottom: 20px;
+  
+}
+
+/* Sectional MPS Button */
+.sectional button {
+  padding: 10px 15px;
+  background-color: #fc981e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 220px;
+  height: 60px;
+}
+
+.sectional button:hover {
+  background-color: #e68919;
+}
+
+/* Radio Button Styling */
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds spacing between radio circle and label */
+  font-weight: bold;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fc981e;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.radio-input:checked + .radio-circle {
+  background-color: #fc981e;
+}
+
+.radio-input:checked + .radio-circle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+form-group.right-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form-group.right-align select {
+  width: fit-content;
+  margin-top: 5px;
+}
+
+.upload-file {
+  width: 25%;              /* Ensure the container takes full width */
+  display: flex;
+  justify-content: flex-start; /* Align the content (button) to the left */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 2px; /* Adjust this value to set the left margin */
+}
+
+
+/* Styling for the Upload Video button */
+.upload-file button {
+  width: 210px;
+  height: 60px;
+  font-size: 18px; /* Adjust font size */
+  font-family: Arial, sans-serif; /* Change font family */
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #fc981e; /* Set a background color */
+  color: white; /* Set text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+}
+
+/* Change background color when button is hovered */
+.upload-file button:hover {
+  background-color: #e68919;
+}
+
+.checkbox-group {
+  display: flex;        /* Arrange children in a row */
+  gap: 20px;            /* Space between checkboxes */
+  margin-top: 10px;     /* Optional: adjust spacing above the checkboxes */
+  margin-bottom: 10px;
+  align-items: center;  /* Vertically center the checkbox and label text */
+}
+
+.checkbox-container {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 7px;             /* Space between the checkbox input and its label text */
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Increase checkbox size */
+.checkbox-container input[type="checkbox"] {
+  transform: scale(1.5); /* Increase the checkbox size */
+  margin-right: 5px;     /* Optional: adjust spacing */
+}
+
+/* Container styling for consistency */
+.report-buttons,
+.additional-report-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Base style for all report buttons */
+.report-buttons button,
+.additional-report-buttons button {
+  padding: 10px 15px;
+  background-color: #fc981e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover styles */
+.report-buttons button:hover,
+.additional-report-buttons button:hover {
+  background-color: #e68919;
+}
+
+/* Custom widths for each button */
+.spm-report {
+  width: 220px;  /* Change as desired */
+}
+
+.cvvrs-report {
+  width: 220px;  /* Change as desired */
+}
+
+.spm-graph {
+  width: 220px;  /* Change as desired */
+}
+
+.summary-video {
+  width: 220px;  /* Change as desired */
+}
+
+/* Video Container */
+.processed-video-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.processed-video-container video {
+  width: 1800px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container, .crew-details {
+    min-width: 100%;
+  }
+
+  .cvvrs-text {
+    font-size: 1.8em;
+    margin-right: 0;
+  }
+
+  .sakar-logo {
+    height: 60px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .sectional-mps-button {
+    width: 100%;
+  }
+
+  .radio-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cvvrs-text {
+    font-size: 1.5em;
+    margin-right: 0;
+  }
+
+  .sakar-logo {
+    height: 50px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sectional-mps-button {
+    width: 100%;
+  }
+}
