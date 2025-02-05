@@ -1,0 +1,86 @@
+.spm-report-container h2 {
+  font-size: 28px; /* Adjust size as needed */
+  color: #37acff; /* Dark color for visibility */
+  margin-bottom: 20px; /* Add spacing below the heading */
+  text-transform: uppercase; /* Optional: for emphasis */
+}
+
+/* Style for Column 1 and Column 3 */
+.spm-table td:nth-child(1),
+.spm-table td:nth-child(3) {
+  font-family: 'Arial', sans-serif; /* Change font to Arial */
+  font-weight: bold; /* Set bold font style */
+  font-size: 20px; /* Adjust font size */
+  color: #333; /* Set color for readability */
+  text-align: left; /* Align text to the left */
+  
+}
+
+/* Style for text boxes in columns 2 and 4 */
+.spm-input {
+  width: 100%; /* Adjust width of text box */
+  height: 35px; /* Increase height for better user experience */
+  padding: 8px; /* More padding for comfort */
+  font-size: 16px; /* Set font size */
+  text-align: left;
+  border: 1px solid #ccc; /* Subtle border color */
+  border-radius: 4px;
+  background-color: #f9f9f9; /* Light background color for text boxes */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  
+}
+
+/* Style for tables */
+.spm-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  margin-left:30px;
+  margin-right:20px;
+  
+}
+
+/* Table header and cell styling */
+.spm-table th, .spm-table td {
+  border: 1px solid #ddd; /* Light border color */
+  padding: 12px; /* Add padding for a more spacious feel */
+  text-align: center; /* Center-align text */
+  background-color: #f2f2f2; /* Light background for headers and cells */
+  font-size: 16px; /* Uniform font size */
+  
+}
+
+/* Text box style inside tables */
+.spm-table td input[type="text"] {
+  width: 100%; /* Full width for text boxes */
+  padding: 8px; /* Increased padding for better UX */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  text-align: left; /* Align text inside input box */
+  
+}
+
+/* Styling for table header */
+.spm-table th {
+  background-color: #e0e0e0; /* Light gray background for headers */
+  font-weight: bold; /* Bold font for headers */
+  
+}
+
+/* Hover effect for rows */
+.spm-table tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+  
+}
+
+/* Style for first column and third column for better visibility */
+.spm-table td:nth-child(1),
+.spm-table td:nth-child(3) {
+  font-weight: bold; /* Make text bold for these columns */
+  color:#fc981e; /* Dark color for better visibility */
+  
+}
+

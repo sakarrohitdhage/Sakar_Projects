@@ -1,0 +1,100 @@
+/* Key Column Styling */
+/* Heading for the Report */
+.cvvrs-report-container h2 {
+  font-family: 'Roboto', sans-serif; /* Change to your desired font */
+  font-size: 28px; /* Adjust the font size */
+  font-weight: bold; /* Make the font bold */
+  color: #333; /* Set the color for the heading */
+  margin-bottom: 20px; /* Add some spacing below the heading */
+  color: #37acff;
+  
+}
+
+.key-column {
+  font-family: Arial, sans-serif; /* Same font for all keys */
+  font-size: 18px; /* Adjust font size here */
+  font-weight: bold; /* Bold for keys */
+  width: 15%; /* Adjust column width if needed */
+  padding: 10px; /* Padding for better spacing */
+  background-color: #e9ecef; /* Light background for key columns */
+  
+}
+
+/* Text Blocks */
+.text-block {
+  color: black;
+  width: 100%;
+  
+  min-height: 50px;
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: Arial, sans-serif; /* Font for text areas */
+}
+
+/* Base Table Styles */
+.cvvrs-report-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  
+}
+
+.cvvrs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  
+}
+
+/* Header Styling for Table */
+.cvvrs-table th {
+  font-family: Arial, sans-serif; /* Custom font for header */
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f8f9fa; /* Light background for headers */
+  padding: 12px;
+  text-align: center;
+  
+  
+}
+
+/* Cell Styling */
+.cvvrs-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  color: #fc981e;
+}
+
+/* Zebra Striping for Table Rows */
+.cvvrs-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.cvvrs-table tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cvvrs-table, .cvvrs-table th, .cvvrs-table td {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    
+  }
+
+  .key-column {
+    width: 20%; /* Adjust key column width on small screens */
+  }
+
+  .cvvrs-table td, .cvvrs-table th {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+

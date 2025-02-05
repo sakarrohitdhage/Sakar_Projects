@@ -1,0 +1,82 @@
+/* Table styling */
+.table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table input {
+  width: 90%; /* Increase the width */
+  padding: 10px; /* Increase the padding for a larger height */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 20px; /* Increase font size */
+  box-sizing: border-box; /* Ensures padding does not affect the width */
+}
+
+.table th, .table td {
+  padding: 14px 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background-color: #fc981e;
+  font-weight: bold;
+  color: black;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Sectional MPS button styling */
+.sectional-mps-button {
+  background-color: #fc981e;
+  border: none;
+  color: black;
+  padding: 14px 28px;
+  font-size: 20px;
+  margin: 12px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sectional-mps-button:hover {
+  background-color: #fc981e;
+  transform: scale(1.05);
+}
+
+.sectional-mps-button:active {
+  background-color: #fc981e;
+  transform: scale(1);
+}
+
+/* Center the Add Row button */
+.add-row-container {
+  display: flex;
+  justify-content: center;  /* Centers the button horizontally */
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Sectional MPS Page Text Centering */
+.App h1 {
+  text-align: center;  /* Center the text horizontally */
+  font-size: 2rem;     /* Set the font size */
+  font-weight: bold;   /* Make the text bold */
+  color: #333;         /* Set the text color */
+  margin-top: 20px;    /* Add top margin */
+  color: black;
+}
+
