@@ -7,6 +7,8 @@ import SectionalMPS from './SectionalMPS'; // Import the SectionalMPS component
 import SpmReport from "./SPMReport";
 import CvvrsReport from "./cvvrsreport";
 import SpmGraph from "./spmgraph";
+import Header from "./header";
+
 const API_URL = "http://127.0.0.1:45448/upload_video/"; // Backend API URL
 
 
@@ -31,6 +33,7 @@ function App() {
   const [alpName,setalpname] = useState("");
   const [alpDesignation,setalpdesignation] = useState("");
   
+  const [file, setFile] = useState(null);
   
   const handleRadioChange = (e) => {
      setSelectedOption(e.target.value);
@@ -118,6 +121,17 @@ function App() {
   // Add your logic to generate summary video here
   alert("Generating Summary Video...");
 };
+  
+  const handleFileUpload = (event) => {
+    const selectedFile = event.target.files[0];
+    setFile(selectedFile);
+  };
+  
+  const handleNavigate = () => {
+    if (file) {
+      navigate("/spm-graph", { state: { file } }); // Pass file data to /graph
+    }
+};
 
   // WebSocket for Real-Time Video URL Updates
   useEffect(() => {
@@ -140,6 +154,15 @@ function App() {
       alert("Unsupported video format! Please upload MP4, WebM, or Ogg.");
     }
   };
+  
+  const handleFileChange = (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    console.log("Selected file:", file.name);
+    // Add logic to process the Excel file
+  }
+};
+
   
   const handleUploadFileClick = () => {
     alert("Upload File Button Clicked");
@@ -199,14 +222,9 @@ function App() {
   
   return (
     <div className="app-container">
-      {/* Header Section with Orange Color Block */}
-      <div className="header-bar">
-        <div className="logo-container">
-          <img src={sakarLogo} alt="Sakar Robotics Logo" className="sakar-logo" />
-        </div>
-        <h1 className="cvvrs-text">CVVRS and SPM Analysis</h1>
-      </div>
-
+      <Header /> {/* Use the Header component here */}
+      
+      
       {/* Main Dashboard Layout */}
       <div className="dashboard-layout">
         {/* Left Panel: Form */}
@@ -377,7 +395,7 @@ function App() {
     {/* Sectional MPS Button */}
     <div className="sectional">
       <button type="button" onClick={handleSectionalMpsClick}>
-        Sectional MPS
+        Caution Order
       </button>
     </div>
     
@@ -489,15 +507,18 @@ function App() {
           
           <div className="form-row">
             <div className="form-group">
-              
-              <input
-                type="file"
-                accept={supportedFormats.join(", ")}
-                onChange={handleVideoChange}
-                required
-              />
-            </div>
+  <input
+    type="file"
+    accept=".xlsx, .xls"
+    onChange={handleFileUpload}
+    
+    required
+  />
+</div>
+
           </div>
+          
+          
           
           {/* Report Buttons */}
 <div className="report-buttons">
@@ -521,7 +542,7 @@ function App() {
 <div className="additional-report-buttons">
   <button
     type="button"
-    onClick={handleGenerateSpmGraph}
+    onClick={handleNavigate}
     className="spm-graph"
   >
     Generate SPM Graph
